@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <meta name="description" content="Asha Pura Studio" />
+    <meta name="author" content="" />
+
+    <!-- Favicon and touch Icons -->
+    <link
+      href="../assets/img/favicon.png"
+      rel="shortcut icon"
+      type="image/png"
+    />
+    <link href="../assets/img/apple-touch-icon.html" rel="apple-touch-icon" />
+    <link
+      href="../assets/img/apple-touch-icon-72x72.html"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="../assets/img/apple-touch-icon-114x114.html"
+      rel="apple-touch-icon"
+      sizes="114x114"
+    />
+    <link
+      href="../assets/img/apple-touch-icon-144x144.html"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Page Title -->
+    <title>Asha Pura Studio</title>
+
+    <!-- Styles Include -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <style>
+      /* .swiper-fade .swiper-slide-active {
+        pointer-events: none;
+      } */
+      .wptb-slider--image {
+        position: relative;
+      }
+
+      .wptb-slider--image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7); /* black overlay with 50% opacity */
+        z-index: 1;
+      }
+
+      .wptb-slider--inner {
+        position: relative;
+        z-index: 2; /* keeps text above the overlay */
+      }
+      .ashapura-slider-container * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .ashapura-slider-wrapper {
+        font-family: "Poppins", sans-serif;
+        background: #1a1a1a;
+      }
+
+      .ashapura-hero-slider {
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .ashapura-swiper-main {
+        width: 100%;
+        height: 100%;
+      }
+
+      .ashapura-swiper-slide {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .ashapura-slide-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.7) 0%,
+          rgba(1, 14, 27, 0.6) 70%,
+          rgba(0, 0, 0, 0.8) 100%
+        );
+        z-index: 1;
+      }
+
+      .ashapura-slide-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        max-width: 900px;
+        padding: 0 0px 0px 150px;
+        animation: ashapura-slideInLeft 1s ease-out;
+      }
+
+      .ashapura-slide-tag {
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #3498db;
+        margin-bottom: 15px;
+        opacity: 0;
+        animation: ashapura-fadeInUp 1s ease-out 0.3s forwards;
+      }
+
+      .ashapura-slide-title {
+        font-size: 4rem;
+        font-weight: 700 !important;
+        line-height: 1.1;
+        margin-bottom: 25px;
+        opacity: 0;
+        animation: ashapura-fadeInUp 1s ease-out 0.5s forwards;
+      }
+
+      .ashapura-slide-description {
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        max-width: 600px;
+        opacity: 0;
+        animation: ashapura-fadeInUp 1s ease-out 0.7s forwards;
+      }
+
+      .ashapura-slide-buttons {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        opacity: 0;
+        animation: ashapura-fadeInUp 1s ease-out 0.9s forwards;
+      }
+
+      .ashapura-btn-primary {
+        background: linear-gradient(45deg, #3498db, #2980b9);
+        color: white;
+        padding: 15px 35px;
+        border: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+      }
+
+      .ashapura-btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4);
+        color: white;
+      }
+
+      .ashapura-btn-secondary {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        padding: 15px 35px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .ashapura-btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-3px);
+        color: white;
+      }
+
+      .ashapura-swiper-pagination {
+        bottom: 30px !important;
+      }
+
+      .ashapura-swiper-pagination .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        background: rgba(255, 255, 255, 0.3);
+        opacity: 1;
+        margin: 0 8px;
+        transition: all 0.3s ease;
+      }
+
+      .ashapura-swiper-pagination .swiper-pagination-bullet-active {
+        background: #3498db;
+        width: 40px;
+        border-radius: 10px;
+      }
+
+      .ashapura-swiper-button-next,
+      .ashapura-swiper-button-prev {
+        color: white;
+        background: rgba(255, 255, 255, 0.1);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .ashapura-swiper-button-next:hover,
+      .ashapura-swiper-button-prev:hover {
+        background: rgba(52, 152, 219, 0.8);
+        transform: scale(1.1);
+      }
+
+      .ashapura-swiper-button-next::after,
+      .ashapura-swiper-button-prev::after {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      @keyframes ashapura-slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes ashapura-fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes ashapura-pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .ashapura-slide-content {
+          padding: 0 30px;
+          text-align: center;
+        }
+
+        .ashapura-slide-title {
+          font-size: 2.5rem;
+        }
+
+        .ashapura-slide-description {
+          font-size: 1rem;
+        }
+
+        .ashapura-slide-buttons {
+          justify-content: center;
+        }
+
+        .ashapura-btn-primary,
+        .ashapura-btn-secondary {
+          padding: 12px 25px;
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .ashapura-slide-title {
+          font-size: 2rem;
+        }
+
+        .ashapura-slide-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .ashapura-btn-primary,
+        .ashapura-btn-secondary {
+          width: 100%;
+          max-width: 250px;
+          text-align: center;
+          justify-content: center;
+        }
+
+        .ashapura-swiper-button-next,
+        .ashapura-swiper-button-prev {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      /* Slide specific backgrounds */
+      .ashapura-slide-1 {
+        background-image: url("assets/img/slider/gallery-1.jpeg");
+      }
+
+      .ashapura-slide-2 {
+        background-image: url("https://images.unsplash.com/photo-1582582621959-48d27397dc69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2126&q=80");
+      }
+
+      .ashapura-slide-3 {
+        background-image: url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2158&q=80");
+      }
+
+      .ashapura-slide-4 {
+        background-image: url("https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+      }
+    </style>
+  </head>
+
+  <body class="theme-style--light theme-style--gradient">
+    <!-- Preloader -->
+    <!-- <div id="preloader">
+      <div class="preloader-inner">
+        <div class="spinner">
+          <img
+            src="https://wpthemebooster.com/demo/themeforest/html/kimono/assets/img/preloader-logo.svg"
+            alt="img"
+          />
+          <img
+            src="https://wpthemebooster.com/demo/themeforest/html/kimono/assets/img/preloader-wheel.svg"
+            alt="img"
+            class="wheel"
+          />
+        </div>
+      </div>
+    </div> -->
+
+    <!-- pointer start -->
+    <div class="pointer bnz-pointer" id="bnz-pointer"></div>
+
+    <!-- Main Header -->
+    <header class="header">
+      <!-- Lower Bar -->
+      <div class="header-inner">
+        <div class="container-fluid pe-0">
+          <div class="d-flex align-items-center justify-content-between">
+            <!-- Left Part -->
+            <div class="header_left_part d-flex align-items-center">
+              <div class="logo">
+                <a href="index.html" class="light_logo"
+                  ><img src="assets/ashaPura-Logo.jpeg" alt="logo"
+                /></a>
+                <a href="index.html" class="dark_logo"
+                  ><img src="assets/ashaPura-Logo.jpeg" alt="logo"
+                /></a>
+              </div>
+            </div>
+
+            <!-- Center Part -->
+            <div class="header_center_part d-none d-xl-block">
+              <div class="mainnav">
+                <ul class="main-menu">
+                  <li class="menu-item">
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="about.html">About Us</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="services.html">Our Services</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="art-work.html">Art Work</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="blog.html">Blog</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Part -->
+            <div class="header_right_part d-flex align-items-center">
+              <div class="aside_open wptb-element">
+                <div class="aside-open--inner">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <!-- <div class="header_search wptb-element">
+                <a
+                  href="#"
+                  class="modal_search_icon"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalSearch"
+                  ><i class="bi bi-search"></i
+                ></a>
+              </div> -->
+
+              <button
+                type="button"
+                class="mr_menu_toggle wptb-element d-xl-none"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Main Header -->
+
+    <!-- Mobile Responsive Menu -->
+    <div class="mr_menu" data-lenis-prevent>
+      <button type="button" class="mr_menu_close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <div class="logo"></div>
+      <!-- Keep this div empty. Logo will come here by JavaScript -->
+
+      <h6>Menu</h6>
+      <div class="mr_navmenu"></div>
+      <!-- Keep this div empty. Menu will come here by JavaScript -->
+
+      <h6>Contact Us</h6>
+      <div class="wptb-icon-box1 style2">
+        <div class="wptb-item--inner flex-start">
+          <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
+          <div class="wptb-item--holder">
+            <p class="wptb-item--description">
+              <a href="mailto:artist.pallavibhandari@gmail.com"
+                >artist.pallavibhandari@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wptb-icon-box1 style2">
+        <div class="wptb-item--inner flex-start">
+          <div class="wptb-item--icon"><i class="bi bi-geo-alt"></i></div>
+          <div class="wptb-item--holder">
+            <p class="wptb-item--description">
+              <a href="contact.html">HITEC City</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wptb-icon-box1 style2">
+        <div class="wptb-item--inner flex-start">
+          <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
+          <div class="wptb-item--holder">
+            <p class="wptb-item--description">
+              <a href="tel:+91 9553339663 ">+91 9553339663</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h6>Find Our Page</h6>
+      <div class="social-box">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/"
+              ><i class="bi bi-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-behance"></i></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="aside_info_wrapper" data-lenis-prevent>
+      <button class="aside_close">Close <i class="bi bi-x-lg"></i></button>
+
+      <div class="aside_logo logo">
+        <a href="index.html" class="light_logo"
+          ><img src="assets/ashaPura-Logo.jpeg" alt="logo"
+        /></a>
+        <a href="index.html" class="dark_logo"
+          ><img src="assets/ashaPura-Logo.jpeg" alt="logo"
+        /></a>
+      </div>
+
+      <div class="aside_info_inner">
+        <h6>// Instagram</h6>
+        <div class="insta-logo">
+          <i class="bi bi-instagram"></i> ashapura_art_studio
+        </div>
+        <div class="wptb-instagram--gallery">
+          <div
+            class="wptb-item--inner d-flex align-items-center justify-content-center flex-wrap"
+          >
+            <div class="wptb-item">
+              <div class="wptb-item--image">
+                <img src="../assets/img/instagram/6.jpg" alt="img" />
+              </div>
+            </div>
+
+            <div class="wptb-item">
+              <div class="wptb-item--image">
+                <img src="../assets/img/instagram/7.jpg" alt="img" />
+              </div>
+            </div>
+
+            <div class="wptb-item">
+              <div class="wptb-item--image">
+                <img src="../assets/img/instagram/8.jpg" alt="img" />
+              </div>
+            </div>
+
+            <div class="wptb-item">
+              <div class="wptb-item--image">
+                <img src="../assets/img/instagram/9.jpg" alt="img" />
+              </div>
+            </div>
+
+            <div class="wptb-item">
+              <div class="wptb-item--image">
+                <img src="../assets/img/instagram/10.jpg" alt="img" />
+              </div>
+            </div>
+
+            <div class="wptb-item">
+              <div class="wptb-item--image">
+                <img src="../assets/img/instagram/11.jpg" alt="img" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wptb-icon-box1 style2">
+          <div class="wptb-item--inner flex-start">
+            <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
+            <div class="wptb-item--holder">
+              <p class="wptb-item--description">
+                <a href="mailto:artist.pallavibhandari@gmail.com"
+                  >artist.pallavibhandari@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wptb-icon-box1 style2">
+          <div class="wptb-item--inner flex-start">
+            <div class="wptb-item--icon"><i class="bi bi-geo-alt"></i></div>
+            <div class="wptb-item--holder">
+              <p class="wptb-item--description">
+                <a href="contact.html">HITEC City, Hyderabad</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wptb-icon-box1 style2">
+          <div class="wptb-item--inner flex-start">
+            <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
+            <div class="wptb-item--holder">
+              <p class="wptb-item--description">
+                <a href="tel:+91 9553339663 ">+91 9553339663 </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h6>// Follow Us</h6>
+        <div class="social-box style-square">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/"
+                ><i class="bi bi-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/ashapura_art_studio?igsh=M2hlZmI4OG02anVl&utm_source=qr"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.behance.com/"
+                ><i class="bi bi-behance"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Search -->
+    <div class="search-modal">
+      <div class="modal fade" id="modalSearch">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="search_overlay">
+              <form class="credential-form" method="post">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="search"
+                    class="keyword form-control"
+                    placeholder="Search Here"
+                  />
+                </div>
+                <button type="submit" class="btn-search">
+                  <span class="text-first">
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Wrapper-->
+    <main class="wrapper">
+      <!-- Slider Section -->
+      <!-- Slider Section -->
+      <div class="ashapura-slider-container" style="margin-top: 100px">
+        <div class="ashapura-hero-slider">
+          <div class="swiper ashapura-swiper-main">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 - Art Agency -->
+              <div class="swiper-slide ashapura-swiper-slide ashapura-slide-1">
+                <div class="ashapura-slide-overlay"></div>
+                <div class="ashapura-slide-content">
+                  <div class="ashapura-slide-tag">Art Agency</div>
+                  <h1 class="ashapura-slide-title" style="color: #fff">
+                    Ashapura Studio — Art Beyond Walls
+                  </h1>
+                  <p class="ashapura-slide-description">
+                    From homes to luxury hotels, Ashapura Studio brings soulful
+                    paintings, murals, and bespoke décor that transform spaces
+                    with harmony and elegance.
+                  </p>
+                  <div class="ashapura-slide-buttons">
+                    <a href="services.html" class="ashapura-btn-primary">
+                      Explore Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="contact.html" class="ashapura-btn-secondary">
+                      Contact Now <i class="fas fa-phone"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 - Interior Design -->
+              <div class="swiper-slide ashapura-swiper-slide ashapura-slide-2">
+                <div class="ashapura-slide-overlay"></div>
+                <div class="ashapura-slide-content">
+                  <div class="ashapura-slide-tag">Interior Design</div>
+                  <h1 class="ashapura-slide-title" style="color: #fff">
+                    Luxury Living Redefined
+                  </h1>
+                  <p class="ashapura-slide-description">
+                    Experience exceptional interior design that blends
+                    contemporary aesthetics with timeless elegance. Every space
+                    tells a unique story of sophistication.
+                  </p>
+                  <div class="ashapura-slide-buttons">
+                    <a href="art-work.html" class="ashapura-btn-primary">
+                      View Portfolio <i class="fas fa-images"></i>
+                    </a>
+                    <a href="contact.html" class="ashapura-btn-secondary">
+                      Get Quote <i class="fas fa-calculator"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 - Custom Murals -->
+              <div class="swiper-slide ashapura-swiper-slide ashapura-slide-3">
+                <div class="ashapura-slide-overlay"></div>
+                <div class="ashapura-slide-content">
+                  <div class="ashapura-slide-tag">Custom Murals</div>
+                  <h1 class="ashapura-slide-title" style="color: #fff">
+                    Walls That Speak Your Story
+                  </h1>
+                  <p class="ashapura-slide-description">
+                    Transform blank walls into breathtaking masterpieces with
+                    our custom mural services. From abstract art to realistic
+                    portraits, we bring your vision to life.
+                  </p>
+                  <div class="ashapura-slide-buttons">
+                    <a href="services.html" class="ashapura-btn-primary">
+                      Commission Art <i class="fas fa-palette"></i>
+                    </a>
+                    <a href="art-work.html" class="ashapura-btn-secondary">
+                      View Gallery <i class="fas fa-eye"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 - Commercial Projects -->
+              <div class="swiper-slide ashapura-swiper-slide ashapura-slide-4">
+                <div class="ashapura-slide-overlay"></div>
+                <div class="ashapura-slide-content">
+                  <div class="ashapura-slide-tag">Commercial Projects</div>
+                  <h1 class="ashapura-slide-title" style="color: #fff">
+                    Corporate Excellence
+                  </h1>
+                  <p class="ashapura-slide-description">
+                    Elevate your business environment with professional art
+                    installations and corporate interior solutions that inspire
+                    creativity and productivity.
+                  </p>
+                  <div class="ashapura-slide-buttons">
+                    <a href="#" class="ashapura-btn-primary">
+                      Our Services <i class="fas fa-briefcase"></i>
+                    </a>
+                    <a href="#" class="ashapura-btn-secondary">
+                      Schedule Consultation <i class="fas fa-calendar"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next ashapura-swiper-button-next"></div>
+            <div class="swiper-button-prev ashapura-swiper-button-prev"></div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination ashapura-swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Kimono -->
+      <section class="wptb-about-two">
+        <div class="container">
+          <!-- Services -->
+          <div class="pd-bottom-100">
+            <div class="row">
+              <!-- Iconbox -->
+              <div class="col-md-3 wow fadeInLeft">
+                <div class="wptb-icon-box6 mb-md-0 active highlight">
+                  <div class="wptb-item--inner">
+                    <div class="wptb-item--icon">
+                      <img
+                        src="https://wpthemebooster.com/demo/themeforest/html/kimono/assets/img/services/icon-1-2.svg"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="wptb-item--holder">
+                      <h4 class="wptb-item--title">
+                        <a href="#">Custom Murals</a>
+                      </h4>
+                      <p class="wptb-item--description">
+                        Pallavi creates intuitive paintings blending meditation
+                        and colors, bringing harmony, healing, and spiritual
+                        energy everywhere.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Iconbox -->
+              <div class="col-md-3 wow fadeInLeft">
+                <div class="wptb-icon-box6 mb-md-0">
+                  <div class="wptb-item--inner">
+                    <div class="wptb-item--icon">
+                      <img
+                        src="https://wpthemebooster.com/demo/themeforest/html/kimono/assets/img/services/icon-2-2.svg"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="wptb-item--holder">
+                      <h4 class="wptb-item--title">
+                        <a href="#">Original Paintings</a>
+                      </h4>
+                      <p class="wptb-item--description">
+                        From jewelry designer to artist, Pallavi’s journey
+                        reflects resilience, passion, and dedication towards
+                        soulful creations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Iconbox -->
+              <div class="col-md-3 wow fadeInLeft">
+                <div class="wptb-icon-box6 mb-md-0">
+                  <div class="wptb-item--inner">
+                    <div class="wptb-item--icon">
+                      <img
+                        src="https://wpthemebooster.com/demo/themeforest/html/kimono/assets/img/services/icon-3-2.svg"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="wptb-item--holder">
+                      <h4 class="wptb-item--title">
+                        <a href="#"
+                          >Decorative Installations</a
+                        >
+                      </h4>
+                      <p class="wptb-item--description">
+                        Ashapura Studio offers murals, décor, and custom
+                        artworks that elevate homes, hotels, and commercial
+                        spaces beautifully.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Iconbox -->
+              <div class="col-md-3 wow fadeInLeft">
+                <div class="wptb-icon-box6 mb-md-0">
+                  <div class="wptb-item--inner">
+                    <div class="wptb-item--icon">
+                      <img
+                        src="https://wpthemebooster.com/demo/themeforest/html/kimono/assets/img/services/icon-4-2.svg"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="wptb-item--holder">
+                      <h4 class="wptb-item--title">
+                        <a href="">Spiritual Artworks</a>
+                      </h4>
+                      <p class="wptb-item--description">
+                        Awarded and appreciated, Pallavi’s artworks have reached
+                        global clients, making Ashapura Studio a trusted
+                        creative brand.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wptb-heading">
+            <div class="wptb-item--inner">
+              <div class="row align-items-center">
+                <div class="col-lg-7">
+                  <h6 class="wptb-item--subtitle">About Agency</h6>
+                  <h1 class="wptb-item--title">
+                    Transforming Spaces <span> with Soulful</span> <br />
+                    Artistic Excellence
+                  </h1>
+                </div>
+                <div class="col-lg-5 text-lg-end">
+                  <div class="wptb-item--button">
+                    <a
+                      href="about.html"
+                      class="btn btn-two creative text-uppercase"
+                    >
+                      <span class="btn-wrap">
+                        <span class="text-first">Contact us Now</span>
+                        <span class="text-second"
+                          ><i class="bi bi-arrow-up-right"></i>
+                          <i class="bi bi-arrow-up-right"></i
+                        ></span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="wptb-image-single wow fadeInUp">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image position-relative">
+                    <img src="../assets/img/services/about-img.jpg" alt="img" />
+
+                    <div class="wptb-item--button round-button">
+                      <a class="btn btn-two" href="about.html">
+                        <span class="btn-wrap">
+                          <span class="text-first">Explore Us</span>
+                          <span class="text-second">
+                            <i class="bi bi-arrow-up-right"></i>
+                            <i class="bi bi-arrow-up-right"></i>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wptb-item-layer wptb-item-layer-one both-version">
+                  <img src="../assets/img/more/light-2.png" alt="img" />
+                  <img src="../assets/img/more/light-2-light.png" alt="img" />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
+              <div class="wptb-about--text ps-md-5">
+                <h3>About ASHA Pura Studios</h3>
+                <p class="wptb-about--text-one">
+                  Pallavi, founder of Ashapura Studio, blends spirituality and
+                  contemporary art to create soulful, vibrant, and meaningful
+                  expressions.
+                </p>
+                <p style="font-size: 17px">
+                  Her studio offers paintings, murals, and décor that transform
+                  ordinary walls into timeless sanctuaries of peace and harmony,
+                  enriching interiors with elegance, creativity, soulful energy,
+                  and a lasting artistic impression that inspires mindfulness
+                  and emotional well-being. Each creation reflects Pallavi’s
+                  intuitive process, blending colors with consciousness. Her
+                  artworks not only decorate spaces but also elevate lifestyles,
+                  bringing balance, positivity, and a touch of timeless
+                  artistry.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wptb-item-layer wptb-item-layer-two">
+          <img src="../assets/img/more/texture-5.png" alt="img" />
+        </div>
+        <div class="wptb-item-layer wptb-item-layer-three">
+          <img src="../assets/img/more/texture-4.png" alt="img" />
+        </div>
+      </section>
+
+      <div class="divider-line-hr"></div>
+
+      <!-- About Kimono -->
+
+      <!-- Our Projects -->
+      <section class="wptb-project pt-0">
+        <div class="container">
+          <div class="wptb-heading-two">
+            <div class="wptb-item--inner text-center">
+              <h6 class="wptb-item--subtitle">Our Portfolio</h6>
+              <h1 class="wptb-item--title">
+                Transforming Spaces <br />
+                With Soulful <span>Art</span>
+              </h1>
+              <div class="wptb-item--description">
+                Our portfolio reflects a harmonious blend of tradition and
+                modern creativity,<br />
+                showcasing artworks that inspire, heal, and transform everyday
+                spaces with elegance.
+              </div>
+            </div>
+          </div>
+
+          <div class="style-masonry effect-blur">
+            <div class="grid grid-3 gutter-10 clearfix">
+              <div class="grid-sizer"></div>
+              <div class="grid-item">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img src="../assets/img/services/project-4.jpg" alt="img" />
+                  </div>
+
+                  <div class="wptb-item--holder">
+                    <div class="wptb-item--meta">
+                      <h4>
+                        <a href="art-work.html">Bright Boho Sunshine</a>
+                      </h4>
+                      <p>By Jonathon Willson</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-item">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img src="../assets/img/services/project-2.jpg" alt="img" />
+                  </div>
+
+                  <div class="wptb-item--holder">
+                    <div class="wptb-item--meta">
+                      <h4>
+                        <a href="art-work.html"
+                          >California Fall Collection 2023</a
+                        >
+                      </h4>
+                      <p>By Jonathon Willson</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-item">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img src="../assets/img/services/project-1.jpg" alt="img" />
+                  </div>
+
+                  <div class="wptb-item--holder">
+                    <div class="wptb-item--meta">
+                      <h4>
+                        <a href="art-work.html">Brown girl next door</a>
+                      </h4>
+                      <p>By Jonathon Willson</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-item">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img
+                      src="../assets/img/services/project-12.jpg"
+                      alt="img"
+                    />
+                  </div>
+
+                  <div class="wptb-item--holder">
+                    <div class="wptb-item--meta">
+                      <h4>
+                        <a href="art-work.html">Fashion next stage</a>
+                      </h4>
+                      <p>By Jonathon Willson</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-item">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img src="../assets/img/services/project-7.jpg" alt="img" />
+                  </div>
+
+                  <div class="wptb-item--holder">
+                    <div class="wptb-item--meta">
+                      <h4>
+                        <a href="art-work.html">Jenifer in green</a>
+                      </h4>
+                      <p>By Jonathon Willson</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-item">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img src="../assets/img/services/project-8.jpg" alt="img" />
+                  </div>
+
+                  <div class="wptb-item--holder">
+                    <div class="wptb-item--meta">
+                      <h4>
+                        <a href="art-work.html">Sunflower Boho girl</a>
+                      </h4>
+                      <p>By Jonathon Willson</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-item">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img
+                      src="../assets/img/services/project-10.jpg"
+                      alt="img"
+                    />
+                  </div>
+
+                  <div class="wptb-item--holder">
+                    <div class="wptb-item--meta">
+                      <h4><a href="art-work.html">Iceland girl</a></h4>
+                      <p>By Jonathon Willson</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-item">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img
+                      src="../assets/img/services/project-11.jpg"
+                      alt="img"
+                    />
+                  </div>
+
+                  <div class="wptb-item--holder">
+                    <div class="wptb-item--meta">
+                      <h4><a href="art-work.html">Summer sadness</a></h4>
+                      <p>By Jonathon Willson</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-item">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img
+                      src="../assets/img/services/project-12.jpg"
+                      alt="img"
+                    />
+                  </div>
+
+                  <div class="wptb-item--holder">
+                    <div class="wptb-item--meta">
+                      <h4>
+                        <a href="art-work.html">Festive mode one</a>
+                      </h4>
+                      <p>By Jonathon Willson</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="grid-item">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img src="../assets/img/projects/1/10.jpg" alt="img" />
+                  </div>
+
+                  <div class="wptb-item--holder">
+                    <div class="wptb-item--meta">
+                      <h4>
+                        <a href="art-work.html">Bright Boho Sunshine0</a>
+                      </h4>
+                      <p>By Jonathon Willson</p>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="wptb-item--button text-center mt-5">
+            <a class="btn btn-two text-uppercase" href="art-work.html">
+              <span class="btn-wrap">
+                <span class="text-first">See All Projects</span>
+                <span class="text-second">
+                  <i class="bi bi-arrow-up-right"></i>
+                  <i class="bi bi-arrow-up-right"></i>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonial -->
+      <section
+        class="wptb-testimonial-one bg-image"
+        style="background-image: url('../assets/img/services/about-img.jpg')"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="swiper-container swiper-testimonial">
+                <!-- swiper slides -->
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="wptb-testimonial1">
+                      <div class="wptb-item--inner">
+                        <div class="wptb-item--holder">
+                          <div
+                            class="d-flex align-items-center justify-content-between mr-bottom-25"
+                          >
+                            <div class="wptb-item--meta-rating">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                            </div>
+
+                            <div class="wptb-item--icon">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="57"
+                                height="45"
+                                viewBox="0 0 57 45"
+                                fill="none"
+                              >
+                                <path
+                                  d="M51.5137 38.5537C56.8209 32.7938 56.2866 25.3969 56.2697 25.3125V2.8125C56.2697 2.06658 55.9734 1.35121 55.4459 0.823763C54.9185 0.296317 54.2031 0 53.4572 0H36.5822C33.48 0 30.9572 2.52281 30.9572 5.625V25.3125C30.9572 26.0584 31.2535 26.7738 31.781 27.3012C32.3084 27.8287 33.0238 28.125 33.7697 28.125H42.4266C42.3671 29.5155 41.9517 30.8674 41.22 32.0513C39.7913 34.3041 37.0997 35.8425 33.2156 36.6188L30.9572 37.0688V45H33.7697C41.5969 45 47.5678 42.8316 51.5137 38.5537ZM20.5566 38.5537C25.8666 32.7938 25.3294 25.3969 25.3125 25.3125V2.8125C25.3125 2.06658 25.0162 1.35121 24.4887 0.823763C23.9613 0.296317 23.2459 0 22.5 0H5.625C2.52281 0 0 2.52281 0 5.625V25.3125C0 26.0584 0.296316 26.7738 0.823762 27.3012C1.35121 27.8287 2.06658 28.125 2.8125 28.125H11.4694C11.41 29.5155 10.9945 30.8674 10.2628 32.0513C8.83406 34.3041 6.1425 35.8425 2.25844 36.6188L0 37.0688V45H2.8125C10.6397 45 16.6106 42.8316 20.5566 38.5537Z"
+                                  fill="#D70006"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+
+                          <p class="wptb-item--description">
+                            “Pallavi’s artwork has completely transformed my
+                            living room. Each painting radiates positive energy
+                            and creates an unmatched sense of harmony. Her
+                            colors speak directly to the soul, making our home
+                            feel warm, inviting, and spiritually uplifting every
+                            single day”
+                          </p>
+                          <div class="wptb-item--meta">
+                            <div class="wptb-item--image">
+                              <img
+                                src="../assets/img/testimonial/1.jpg"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="wptb-item--meta-left">
+                              <h4 class="wptb-item--title">Ritika Sharma</h4>
+                              <h6 class="wptb-item--designation">Hyderabad</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wptb-testimonial1">
+                      <div class="wptb-item--inner">
+                        <div class="wptb-item--holder">
+                          <div
+                            class="d-flex align-items-center justify-content-between mr-bottom-25"
+                          >
+                            <div class="wptb-item--meta-rating">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                            </div>
+
+                            <div class="wptb-item--icon">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="57"
+                                height="45"
+                                viewBox="0 0 57 45"
+                                fill="none"
+                              >
+                                <path
+                                  d="M51.5137 38.5537C56.8209 32.7938 56.2866 25.3969 56.2697 25.3125V2.8125C56.2697 2.06658 55.9734 1.35121 55.4459 0.823763C54.9185 0.296317 54.2031 0 53.4572 0H36.5822C33.48 0 30.9572 2.52281 30.9572 5.625V25.3125C30.9572 26.0584 31.2535 26.7738 31.781 27.3012C32.3084 27.8287 33.0238 28.125 33.7697 28.125H42.4266C42.3671 29.5155 41.9517 30.8674 41.22 32.0513C39.7913 34.3041 37.0997 35.8425 33.2156 36.6188L30.9572 37.0688V45H33.7697C41.5969 45 47.5678 42.8316 51.5137 38.5537ZM20.5566 38.5537C25.8666 32.7938 25.3294 25.3969 25.3125 25.3125V2.8125C25.3125 2.06658 25.0162 1.35121 24.4887 0.823763C23.9613 0.296317 23.2459 0 22.5 0H5.625C2.52281 0 0 2.52281 0 5.625V25.3125C0 26.0584 0.296316 26.7738 0.823762 27.3012C1.35121 27.8287 2.06658 28.125 2.8125 28.125H11.4694C11.41 29.5155 10.9945 30.8674 10.2628 32.0513C8.83406 34.3041 6.1425 35.8425 2.25844 36.6188L0 37.0688V45H2.8125C10.6397 45 16.6106 42.8316 20.5566 38.5537Z"
+                                  fill="#D70006"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+
+                          <p class="wptb-item--description">
+                            “The mural designed by Ashapura Studio is now the
+                            centerpiece of our hotel lobby. Guests consistently
+                            admire its elegance, balance, and peaceful energy.
+                            Pallavi’s professionalism, attention to detail, and
+                            creative vision made the entire experience seamless,
+                            inspiring, and truly memorable.”
+                          </p>
+                          <div class="wptb-item--meta">
+                            <div class="wptb-item--image">
+                              <img
+                                src="../assets/img/testimonial/2.jpg"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="wptb-item--meta-left">
+                              <h4 class="wptb-item--title">Helen Jordan</h4>
+                              <h6 class="wptb-item--designation">Chicago</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="wptb-testimonial1">
+                      <div class="wptb-item--inner">
+                        <div class="wptb-item--holder">
+                          <div
+                            class="d-flex align-items-center justify-content-between mr-bottom-25"
+                          >
+                            <div class="wptb-item--meta-rating">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                            </div>
+
+                            <div class="wptb-item--icon">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="57"
+                                height="45"
+                                viewBox="0 0 57 45"
+                                fill="none"
+                              >
+                                <path
+                                  d="M51.5137 38.5537C56.8209 32.7938 56.2866 25.3969 56.2697 25.3125V2.8125C56.2697 2.06658 55.9734 1.35121 55.4459 0.823763C54.9185 0.296317 54.2031 0 53.4572 0H36.5822C33.48 0 30.9572 2.52281 30.9572 5.625V25.3125C30.9572 26.0584 31.2535 26.7738 31.781 27.3012C32.3084 27.8287 33.0238 28.125 33.7697 28.125H42.4266C42.3671 29.5155 41.9517 30.8674 41.22 32.0513C39.7913 34.3041 37.0997 35.8425 33.2156 36.6188L30.9572 37.0688V45H33.7697C41.5969 45 47.5678 42.8316 51.5137 38.5537ZM20.5566 38.5537C25.8666 32.7938 25.3294 25.3969 25.3125 25.3125V2.8125C25.3125 2.06658 25.0162 1.35121 24.4887 0.823763C23.9613 0.296317 23.2459 0 22.5 0H5.625C2.52281 0 0 2.52281 0 5.625V25.3125C0 26.0584 0.296316 26.7738 0.823762 27.3012C1.35121 27.8287 2.06658 28.125 2.8125 28.125H11.4694C11.41 29.5155 10.9945 30.8674 10.2628 32.0513C8.83406 34.3041 6.1425 35.8425 2.25844 36.6188L0 37.0688V45H2.8125C10.6397 45 16.6106 42.8316 20.5566 38.5537Z"
+                                  fill="#D70006"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+
+                          <p class="wptb-item--description">
+                            “I commissioned a custom painting for my office, and
+                            Pallavi exceeded all expectations. Her intuitive
+                            creativity and precision captured exactly what I
+                            envisioned. The artwork not only enhances the décor
+                            but also uplifts everyone who walks into the space.”
+                          </p>
+                          <div class="wptb-item--meta">
+                            <div class="wptb-item--image">
+                              <img
+                                src="../assets/img/testimonial/3.jpg"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="wptb-item--meta-left">
+                              <h4 class="wptb-item--title">Helen Jordan</h4>
+                              <h6 class="wptb-item--designation">New York</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Swiper Navigation -->
+                <div class="wptb-swiper-navigation style1">
+                  <div class="wptb-swiper-arrow swiper-button-prev"></div>
+                  <div class="wptb-swiper-arrow swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section class="wptb-team-one">
+        <div class="container">
+          <div class="wptb-heading">
+            <div class="wptb-item--inner">
+              <div class="row">
+                <div class="col-lg-6">
+                  <h6 class="wptb-item--subtitle">
+                    <span>05 //</span> Our Team
+                  </h6>
+                  <h1 class="wptb-item--title mb-lg-0">
+                    Represented Artists at <br />
+                    <span>Ashapura Studio</span>
+                  </h1>
+                </div>
+
+                <div class="col-lg-6">
+                  <p class="wptb-item--description">
+                    We showcase talented artists whose works embody creativity,
+                    spirituality, and elegance, offering soulful expressions and
+                    timeless artistry that transform spaces into sanctuaries of
+                    beauty, harmony, and inspiration.
+                  </p>
+
+                  <!-- Swiper Navigation -->
+                  <div class="wptb-swiper-navigation style1">
+                    <div class="wptb-swiper-arrow swiper-button-prev"></div>
+                    <div class="wptb-swiper-arrow swiper-button-next"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-container swiper-team">
+            <div class="swiper-wrapper">
+              <!-- Team Block -->
+              <div class="swiper-slide">
+                <div class="wptb-team-grid1">
+                  <div class="wptb-item--inner">
+                    <div class="wptb-item--image">
+                      <img src="../assets/img/team/1.jpg" alt="img" />
+                    </div>
+
+                    <div class="wptb-item--holder">
+                      <div class="wptb-item--meta">
+                        <h5 class="wptb-item--title">Maxim Alexhander</h5>
+                        <p class="wptb-item--position">CEO, Kimono Agency</p>
+                      </div>
+                      <div class="wptb-item--social">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">YT</a>
+                        <a href="#">DR</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Team Block -->
+              <div class="swiper-slide">
+                <div class="wptb-team-grid1">
+                  <div class="wptb-item--inner">
+                    <div class="wptb-item--image">
+                      <img src="../assets/img/team/2.jpg" alt="img" />
+                    </div>
+
+                    <div class="wptb-item--holder">
+                      <div class="wptb-item--meta">
+                        <h5 class="wptb-item--title">Nelson Jameson</h5>
+                        <p class="wptb-item--position">Photographer</p>
+                      </div>
+                      <div class="wptb-item--social">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">YT</a>
+                        <a href="#">DR</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Team Block -->
+              <div class="swiper-slide">
+                <div class="wptb-team-grid1">
+                  <div class="wptb-item--inner">
+                    <div class="wptb-item--image">
+                      <img src="../assets/img/team/3.jpg" alt="img" />
+                    </div>
+
+                    <div class="wptb-item--holder">
+                      <div class="wptb-item--meta">
+                        <h5 class="wptb-item--title">Ellie Duncan</h5>
+                        <p class="wptb-item--position">Photographer</p>
+                      </div>
+                      <div class="wptb-item--social">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">YT</a>
+                        <a href="#">DR</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Team Block -->
+              <div class="swiper-slide">
+                <div class="wptb-team-grid1">
+                  <div class="wptb-item--inner">
+                    <div class="wptb-item--image">
+                      <img src="../assets/img/team/4.jpg" alt="img" />
+                    </div>
+
+                    <div class="wptb-item--holder">
+                      <div class="wptb-item--meta">
+                        <h5 class="wptb-item--title">Harold Earls</h5>
+                        <p class="wptb-item--position">Photographer</p>
+                      </div>
+                      <div class="wptb-item--social">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">YT</a>
+                        <a href="#">DR</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Team Block -->
+              <div class="swiper-slide">
+                <div class="wptb-team-grid1">
+                  <div class="wptb-item--inner">
+                    <div class="wptb-item--image">
+                      <img src="../assets/img/team/2.jpg" alt="img" />
+                    </div>
+
+                    <div class="wptb-item--holder">
+                      <div class="wptb-item--meta">
+                        <h5 class="wptb-item--title">Nelson Jameson</h5>
+                        <p class="wptb-item--position">Photographer</p>
+                      </div>
+                      <div class="wptb-item--social">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">YT</a>
+                        <a href="#">DR</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Team Block -->
+              <div class="swiper-slide">
+                <div class="wptb-team-grid1">
+                  <div class="wptb-item--inner">
+                    <div class="wptb-item--image">
+                      <img src="../assets/img/team/3.jpg" alt="img" />
+                    </div>
+
+                    <div class="wptb-item--holder">
+                      <div class="wptb-item--meta">
+                        <h5 class="wptb-item--title">Ellie Duncan</h5>
+                        <p class="wptb-item--position">Photographer</p>
+                      </div>
+                      <div class="wptb-item--social">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">YT</a>
+                        <a href="#">DR</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-line-hr"></div>
+
+      <!-- <div class="divider-line-hr mr-bottom-40"></div> -->
+
+      <!-- Contact -->
+      <!-- Home Contact Section -->
+      <section class="ashapura-home-contact-wrapper">
+        <!-- Background Elements -->
+        <div class="ashapura-home-contact-bg-elements">
+          <div class="ashapura-home-contact-circle-1"></div>
+          <div class="ashapura-home-contact-circle-2"></div>
+          <div class="ashapura-home-contact-wave-pattern"></div>
+        </div>
+
+        <div class="container ashapura-home-contact-main-container">
+          <div class="row align-items-center">
+            <!-- Left Content -->
+            <div class="col-lg-5 mb-5 mb-lg-0">
+              <div class="ashapura-home-contact-badge">
+                <i class="fas fa-palette"></i>
+                Contact Us
+              </div>
+
+              <h2 class="ashapura-home-contact-title">
+                Feel Free To Ask Us<br />
+                Anything
+                <span class="ashapura-home-contact-title-highlight"
+                  >Contact Us</span
+                >
+              </h2>
+
+              <p class="ashapura-home-contact-subtitle">
+                Have a vision for your space? Want to commission a custom
+                artwork? We're here to bring your artistic dreams to life with
+                personalized spiritual and contemporary art.
+              </p>
+            </div>
+
+            <!-- Right Contact Form -->
+            <div class="col-lg-7">
+              <div class="ashapura-home-contact-form-container">
+                <!-- Decorative Elements -->
+                <div class="ashapura-home-contact-decorative-elements">
+                  <div class="ashapura-home-contact-paint-splash"></div>
+                  <div class="ashapura-home-contact-paint-splash"></div>
+                  <div class="ashapura-home-contact-paint-splash"></div>
+                  <div class="ashapura-home-contact-paint-splash"></div>
+                </div>
+
+                <!-- Success Message -->
+                <div
+                  id="ashapuraHomeContactSuccess"
+                  class="ashapura-home-contact-success"
+                >
+                  <i class="fas fa-check-circle me-2"></i>
+                  Thank you! Your message has been sent successfully. We'll get
+                  back to you soon!
+                </div>
+
+                <form id="ashapuraHomeContactForm" method="POST" action="#">
+                  <!-- Name and Email Row -->
+                  <div class="row ashapura-home-contact-form-row">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <div class="ashapura-home-contact-form-group">
+                        <input
+                          type="text"
+                          class="ashapura-home-contact-input"
+                          name="name"
+                          placeholder="Name*"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="ashapura-home-contact-form-group">
+                        <input
+                          type="email"
+                          class="ashapura-home-contact-input"
+                          name="email"
+                          placeholder="E-mail*"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Subject Row -->
+                  <div class="ashapura-home-contact-form-row">
+                    <div class="ashapura-home-contact-form-group">
+                      <input
+                        type="text"
+                        class="ashapura-home-contact-input"
+                        name="subject"
+                        placeholder="Subject*"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Message Row -->
+                  <div class="ashapura-home-contact-form-row">
+                    <div class="ashapura-home-contact-form-group">
+                      <textarea
+                        class="ashapura-home-contact-input ashapura-home-contact-textarea"
+                        name="message"
+                        placeholder="Tell us about your vision, space, or art requirements..."
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="ashapura-home-contact-submit-wrapper">
+                    <button
+                      type="submit"
+                      class="ashapura-home-contact-submit-btn"
+                    >
+                      Send Mail
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="ashapura-unique-footer-section">
+      <div class="ashapura-unique-footer-waves">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="container ashapura-unique-container">
+        <div class="row">
+          <!-- About Section -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ashapura-unique-footer-widget">
+              <div class="ashapura-unique-footer-logo">
+                <h3>AshaPura Art Studio</h3>
+                <div class="ashapura-unique-logo-tagline">
+                  Colors, Consciousness & Creativity
+                </div>
+              </div>
+              <p class="ashapura-unique-footer-description">
+                Transforming spaces into sanctuaries through spiritual and
+                contemporary art. Based in Hyderabad, creating original
+                paintings, murals, and custom artworks that touch hearts and
+                elevate everyday spaces.
+              </p>
+              <div class="ashapura-unique-footer-stats">
+                <div class="ashapura-unique-stat-item">
+                  <span class="ashapura-unique-stat-number">800+</span>
+                  <span class="ashapura-unique-stat-label">Artworks Sold</span>
+                </div>
+                <div class="ashapura-unique-stat-item">
+                  <span class="ashapura-unique-stat-number">6+</span>
+                  <span class="ashapura-unique-stat-label"
+                    >Years Experience</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist Info Section -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="ashapura-unique-footer-widget">
+              <h4 class="ashapura-unique-footer-title">Meet Pallavi</h4>
+              <div class="ashapura-unique-artist-profile">
+                <div class="ashapura-unique-artist-avatar">
+                  <i class="fas fa-palette"></i>
+                </div>
+                <div class="ashapura-unique-artist-info">
+                  <h5>Pallavi Jain</h5>
+                  <p class="ashapura-unique-artist-title">
+                    Founder & Spiritual Artist
+                  </p>
+                  <p class="ashapura-unique-artist-description">
+                    A Hyderabad-based artist whose intuitive, soul-guided
+                    process bridges inner meditation with vibrant expressions on
+                    canvas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="ashapura-unique-specialties">
+                <h6>Specializations:</h6>
+                <div class="ashapura-unique-specialty-tags">
+                  <span class="ashapura-unique-tag">Abstract Art</span>
+                  <span class="ashapura-unique-tag">Spiritual Paintings</span>
+                  <span class="ashapura-unique-tag">Custom Murals</span>
+                  <span class="ashapura-unique-tag">Tanjore Art</span>
+                  <span class="ashapura-unique-tag">Portraits</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact & Social Section -->
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="ashapura-unique-footer-widget">
+              <h4 class="ashapura-unique-footer-title">Get In Touch</h4>
+
+              <div class="ashapura-unique-contact-info">
+                <div class="ashapura-unique-contact-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Himayat Nagar, Hyderabad, Telangana</span>
+                </div>
+                <div class="ashapura-unique-contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <a href="mailto:artist.pallavibhandari@gmail.com"
+                    >artist.pallavibhandari@gmail.com</a
+                  >
+                </div>
+                <div class="ashapura-unique-contact-item">
+                  <i class="fas fa-phone"></i>
+                  <span>+91 9553339663 / 9949455505</span>
+                </div>
+              </div>
+
+              <div class="ashapura-unique-social-section">
+                <h6>Follow My Journey</h6>
+                <div class="ashapura-unique-social-links">
+                  <a
+                    href="#"
+                    class="ashapura-unique-social-link ashapura-unique-instagram"
+                    title="Instagram"
+                  >
+                    <i class="fab fa-instagram"></i>
+                    <span>@ashapura_art_studio</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="ashapura-unique-social-link ashapura-unique-facebook"
+                    title="Facebook"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Ashapura Art Studio</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="ashapura-unique-social-link ashapura-unique-linkedin"
+                    title="LinkedIn"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>Pallavi Bhandari Jain</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="ashapura-unique-social-link ashapura-unique-pinterest"
+                    title="Pinterest"
+                  >
+                    <i class="fab fa-pinterest"></i>
+                    <span>Ashapura_art_studio</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="ashapura-unique-footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="ashapura-unique-footer-copyright">
+                <p>&copy; 2025 AshaPura Art Studio. All rights reserved.</p>
+                <p class="ashapura-unique-footer-tagline">
+                  "Colors are the language of the soul"
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="ashapura-unique-footer-awards">
+                <div class="ashapura-unique-award-badge">
+                  <i class="fas fa-trophy"></i>
+                  <span>Most Creative Stall - IIID Exhibition</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Art Brush -->
+      <div class="ashapura-unique-floating-brush">
+        <i class="fas fa-paint-brush"></i>
+      </div>
+    </footer>
+
+    <div class="totop">
+      <a href="#"><i class="bi bi-chevron-up"></i></a>
+    </div>
+
+    <!-- Core JS -->
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- Framework -->
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+    <!-- WOW Scroll Effect -->
+    <script src="../plugins/wow/wow.min.js"></script>
+
+    <!-- Swiper Slider -->
+    <script src="../plugins/swiper/swiper-bundle.min.js"></script>
+    <script src="../plugins/swiper/swiper-gl.min.js"></script>
+
+    <!-- Odometer Counter -->
+    <script src="../plugins/odometer/appear.js"></script>
+    <script src="../plugins/odometer/odometer.js"></script>
+
+    <!-- Projects -->
+    <script src="../plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="../plugins/isotope/imagesloaded.pkgd.min.js"></script>
+
+    <script src="../plugins/isotope/tilt.jquery.js"></script>
+    <script src="../plugins/isotope/isotope-init.js"></script>
+
+    <!-- Fancybox -->
+    <script src="../plugins/fancybox/jquery.fancybox.min.js"></script>
+
+    <!-- Flatpickr -->
+    <script src="../plugins/flatpickr/flatpickr.min.js"></script>
+
+    <!-- Nice Select -->
+    <script src="../plugins/nice-select/jquery.nice-select.min.js"></script>
+
+    <!-- Cursor Effect -->
+    <script src="../plugins/cursor-effect/cursor-effect.js"></script>
+
+    <!-- Theme Custom JS -->
+    <script src="../assets/js/theme.js"></script>
+
+    <script>
+      // Initialize Swiper
+      document.addEventListener("DOMContentLoaded", function () {
+        const ashapuraSwiper = new Swiper(".ashapura-swiper-main", {
+          // Optional parameters
+          direction: "horizontal",
+          loop: true,
+          speed: 1000,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          effect: "fade",
+          fadeEffect: {
+            crossFade: true,
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: ".ashapura-swiper-button-next",
+            prevEl: ".ashapura-swiper-button-prev",
+          },
+
+          // Pagination
+          pagination: {
+            el: ".ashapura-swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+          },
+
+          // Responsive breakpoints
+          breakpoints: {
+            320: {
+              autoplay: {
+                delay: 4000,
+              },
+            },
+            640: {
+              autoplay: {
+                delay: 5000,
+              },
+            },
+            768: {
+              autoplay: {
+                delay: 5000,
+              },
+            },
+          },
+
+          // Events
+          on: {
+            slideChange: function () {
+              // Reset animations for new slide
+              const activeSlide = this.slides[this.activeIndex];
+              const content = activeSlide.querySelector(
+                ".ashapura-slide-content"
+              );
+              if (content) {
+                content.style.animation = "none";
+                setTimeout(() => {
+                  content.style.animation = "ashapura-slideInLeft 1s ease-out";
+                }, 50);
+              }
+            },
+          },
+        });
+
+        // Pause autoplay on hover
+        const swiperContainer = document.querySelector(".ashapura-swiper-main");
+        swiperContainer.addEventListener("mouseenter", () => {
+          ashapuraSwiper.autoplay.stop();
+        });
+
+        swiperContainer.addEventListener("mouseleave", () => {
+          ashapuraSwiper.autoplay.start();
+        });
+      });
+    </script>
+  </body>
+</html>
